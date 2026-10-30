@@ -1,83 +1,51 @@
 # Project 3 – Claude AI Engineer: Evaluation and Observability
 
-This repository contains the three project implementations and their evaluation
-artifacts for Project 3.
+This submission contains three project implementations.
 
 ## Project components
 
 ### 1. Mortgage Document Extraction
 Folder: `mortgage/`
 
-Contains the mortgage extraction implementation, mathematical consistency
-validation, fixtures, tests, and execution evidence.
-
-Key evidence:
-- `extract-run.txt` – normal document extraction.
-- `discrepancy-run.txt` – income total mismatch detection.
-- `missing-bonus-run.txt` – missing bonus information preserved as null.
-- `perturbation-run.txt` – validation tolerance perturbation.
-- `tests.txt` and `static-checks.txt` – test and static analysis results.
+Includes the mortgage extraction pipeline, mathematical consistency validation, source code, tests, document fixtures, recorded responses for offline replay, and the tolerance perturbation script.
 
 ### 2. Insurance Policy Extraction
 Folder: `insurance/`
 
-Contains the insurance policy extraction, independent review, human-in-the-loop
-routing, routing decisions, and tests.
-
-Key evidence:
-- `routing_decisions.json` – saved policy routing decisions.
-- `perturbation-run.txt` – missing endorsements source-data perturbation.
-- `calibration-report.txt` – calibration report output.
-- `tests.txt` and `static-checks.txt` – test and static analysis results.
-
-Note: The calibration report uses an illustrative sample and should not be
-interpreted as a statistical calibration of all live policy decisions.
+Includes insurance policy extraction, retry handling, batch processing, independent review, deterministic human-in-the-loop routing, calibration logic, policy fixtures, and tests.
 
 ### 3. Supply Chain Risk Synthesis
 Folder: `supply-chain/`
 
-Contains the multi-source supply chain risk coordinator, source readers,
-supporting modules, fixtures, and tests.
+Includes the multi-source supply-chain investigation system, source readers, risk synthesis, offline fixtures, supporting data, and tests.
 
-Key evidence:
-- `normal-run.txt` – normal offline investigation.
-- `timeout-run.txt` – simulated logistics source timeout.
-- `tests.txt` and `static-checks.txt` – test and static analysis results.
+## Project structure
 
-The saved runs demonstrate Well-Established, Contested, and Incomplete findings,
-including graceful handling of an unavailable source.
+Each project contains its own:
+- Python source package
+- `tests/` directory
+- `pyproject.toml` dependency and tool configuration
+- Exercise README and supporting fixtures/data
 
-### 4. Evaluation Artifacts
-Folder: `evaluation/`
+## Reproducibility
 
-Contains:
-- `environment.txt` – operating system, Python versions, execution date, and
-  virtual environment paths.
-- `perturbation-log.md` – controlled perturbations, commands, observed outputs,
-  and comparisons with baseline behavior.
-- `reflection-brief.md` – evaluation findings and engineering reflections.
-- Individual test, static-check, and run evidence files.
+The mortgage project includes recorded API responses to support offline replay and deterministic testing. The supply-chain project includes local fixtures and supporting data.
 
-## Reproducibility and evidence
+Refer to each project's README for setup, dependencies, and test commands.
 
-Execution evidence is saved as text files in the corresponding project folders
-and in `evaluation/`.
+## Important notes
 
-Each project includes test results and static analysis results. The saved
-environment details identify the runtime used for the exercises.
+- Missing mortgage values are preserved as null rather than invented.
+- Insurance routing uses extraction confidence, reviewer agreement, and integration findings.
+- Supply-chain investigation handles unavailable sources while preserving incomplete evidence.
 
-The evidence was generated using the original Udacity `starter/` project workspaces and their Python 3.12.16 virtual environments. The corresponding project files and evidence were then organized into the `insurance/`, `mortgage/`, and `supply-chain/` folders in this submission repository. The paths in `environment.txt` refer to the original execution environments, not the submission folder structure.
+## Reflection and verification
 
-For setup instructions, dependencies, and test commands, refer to the README
-and `pyproject.toml` in each project folder.
+See [`REFLECTION.md`](REFLECTION.md) for the engineering reflection, experiment findings, validation decisions, and reliability principles across all three projects.
 
-## Important evaluation notes
+Latest local test results:
+- Mortgage: 25 passed.
+- Insurance: 47 passed; 1 live API test was blocked by the configured model access policy (`400 Invalid Model`).
+- Supply chain: 34 passed.
 
-- Mortgage extraction preserves unavailable source values as null rather than
-  inventing values.
-- Insurance routing decisions retain the policy-level reasons and review
-  information in `routing_decisions.json`.
-- The insurance calibration report is illustrative and is not a live
-  calibration analysis of the complete routing dataset.
-- Supply-chain investigation continues when the logistics source times out,
-  while marking unavailable information as incomplete.
+The insurance API limitation is documented in the reflection. The other test suites completed successfully.

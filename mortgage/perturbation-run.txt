@@ -1,8 +1,0 @@
-=== MORTGAGE TOLERANCE PERTURBATION ===
-Input: fixtures/documents/income_sum_mismatch.txt
-Default tolerance: $1.00
-Perturbed tolerance: $1,300.00
-Normal validation: consistent=False
-Normal discrepancy: field=total_monthly_income, calculated=9642.17, stated=10892.17, delta=-1250.0
-Perturbed validation: consistent=True
-Perturbed discrepancies: 0
