@@ -57,7 +57,8 @@ def main(argv: list[str] | None = None) -> int:
     pipeline = Pipeline(model=args.model, client=RecordingClient(mode=args.mode))
 
     try:
-        extraction = pipeline.run(document_text)
+        classification = pipeline.classify_document(document_text)
+        extraction = pipeline.extract(document_text, classification.document_type)
     except UnsupportedDocumentTypeError as exc:
         print(f"unsupported document: {exc.reason}", file=sys.stderr)
         return 3
@@ -67,6 +68,7 @@ def main(argv: list[str] | None = None) -> int:
 
     report = validate(extraction)
     payload = {
+        "document_type": classification.document_type.value,
         "extraction": extraction.model_dump(mode="json"),
         "validation": report.model_dump(mode="json"),
     }

@@ -175,3 +175,5 @@ For a real insurance or mortgage document-processing workflow, I would combine:
 6. Operational monitoring for test results, route counts, escalation reasons, retry counts, source outages, and validation failures.
 
 These controls make the workflow more auditable and resilient. They also keep uncertain or unsupported information from being silently treated as verified data.
+
+**The central reliability principle is: never let an unverifiable value look verified.** In insurance, missing endorsements must trigger escalation; in mortgage processing, mathematical discrepancies must remain visible rather than being accepted through relaxed tolerances; and in supply-chain analysis, conflicting or unavailable source data must retain its provenance and uncertainty instead of being silently presented as fact.

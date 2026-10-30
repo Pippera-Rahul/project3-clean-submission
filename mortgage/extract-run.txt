@@ -1,5 +1,5 @@
-$ .venv/bin/mortgage-extract fixtures/documents/appraisal_informal_sqft.txt
 {
+  "document_type": "appraisal",
   "extraction": {
     "borrower": {
       "full_name": "Hartwell, J. and Hartwell, M.",
@@ -43,5 +43,3 @@ $ .venv/bin/mortgage-extract fixtures/documents/appraisal_informal_sqft.txt
     "discrepancies": []
   }
 }
-
-Exit code: 0

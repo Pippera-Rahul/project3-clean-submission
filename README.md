@@ -66,6 +66,8 @@ and in `evaluation/`.
 Each project includes test results and static analysis results. The saved
 environment details identify the runtime used for the exercises.
 
+The evidence was generated using the original Udacity `starter/` project workspaces and their Python 3.12.16 virtual environments. The corresponding project files and evidence were then organized into the `insurance/`, `mortgage/`, and `supply-chain/` folders in this submission repository. The paths in `environment.txt` refer to the original execution environments, not the submission folder structure.
+
 For setup instructions, dependencies, and test commands, refer to the README
 and `pyproject.toml` in each project folder.
 
