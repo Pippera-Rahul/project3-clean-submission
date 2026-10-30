@@ -1,0 +1,33 @@
+=== DATE OF EVIDENCE CAPTURE ===
+Fri Oct 30 09:01:03 UTC 2026
+
+=== OPERATING SYSTEM ===
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+
+Linux vscode 4.19.0-gvisor #1 SMP Sun Jan 10 15:06:54 PST 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+=== SYSTEM PYTHON ===
+Python 3.10.14
+
+=== INSURANCE ENVIRONMENT ===
+Path: /voc/work/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Validated, Routed Insurance Policy Extraction Pipeline/04-hitl-routing/starter/.venv
+Python 3.12.16
+
+=== MORTGAGE ENVIRONMENT ===
+Path: /voc/work/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Build a Resilient Mortgage Document Extraction System/04-validate-mathematical-consistency/starter/.venv
+Python 3.12.16
+
+=== SUPPLY CHAIN ENVIRONMENT ===
+Path: /voc/work/cd15552-Claude-AI-Engineer-Evaluation-and-Observability/Investigate Supply Chain Risk with Multi-Source Synthesis/03-resilient-coordinator/starter/.venv
+Python 3.12.16

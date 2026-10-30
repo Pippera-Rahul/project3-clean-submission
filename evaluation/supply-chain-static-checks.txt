@@ -1,0 +1,5 @@
+=== MYPY ===
+Success: no issues found in 8 source files
+
+=== RUFF ===
+All checks passed!
